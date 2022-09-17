@@ -1,5 +1,5 @@
 .logo {
-font-size: 1.5 em;    
+font-size: 3 em;    
 }
 .main-class{
 
@@ -14,7 +14,7 @@ font-size: 1.5 em;
 display: block;
 }
 .thumbnails-list{
-
+list-style: none;
 }
 .thumbnails-item{
 
@@ -22,9 +22,12 @@ display: block;
 .thumbnails-conteiner{
 
 }
+.thumbnails-image{
+
+}
 .thumbnails-title{
 
 }
-thumbnails-anchor{
+.thumbnails-anchor{
     display-block
 }
