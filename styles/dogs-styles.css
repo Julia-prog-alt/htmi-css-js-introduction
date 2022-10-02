@@ -1,70 +1,87 @@
 @font-face {
     font-family: lakeshore;
-    src: url("LAKESHOR-webfont.svg");
+    src: url("fonts/LAKESHOR-webfont.svg");
     src: url("fonts/LAKESHOR-webfont.woff")
 }
+
 @font-face {
     font-family: airstream;
-    src: url("Airstream-webfont.svg");
+    src: url("fonts/Airstream-webfont.svg");
     src: url("fonts/Airstream-webfont.woff")
 }
-:root{
-    --thumbnails-img-width:20vw;
-    --thumbnails-img-height:15vw;
-    --thumbnails-title-height: calc(var(--thumbnails-img-height)*0.33);
+
+:root {
+    --thumbnails-img-width: 20vw;
+    --thumbnails-img-height: 15vw;
+    --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33)
 }
-body, html{
+
+body,
+html {
     height: 100%;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
-    background-color: antiquewhite;
+    background-color: azure;
     margin: 0;
 
 }
-.logo{
+
+.logo {
     font-size: 2em;
     background-color: bisque;
-    display:block;
+    display: block;
     text-align: center;
     font-family: lakeshore;
     text-transform: uppercase;
     letter-spacing: 5px;
 
 }
-.main-class{
-    display:flex;
+
+.main-class {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
 }
-.details-conteiner{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 10vh;
-position: relative;
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
 
 
 }
-.details-image{
+
+.details-frame {
+    position: relative;
+}
+
+.details-image {
     width: 90vw;
     height: 70vw;
     border-radius: 25%;
+
 }
-.details-title{
+
+.details-title {
     display: block;
     font-family: airstream;
     font-style: italic;
     background-color: beige;
     position: absolute;
-    left: 3vw;
-    bottom: 2vw;
+
+    left: 0;
+    bottom: 2vh;
+
 
 
 }
-.thumbnails-list{
+
+.thumbnails-list {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -75,32 +92,38 @@ position: relative;
     padding-left: 0;
 
 }
-.thumbnails-item{
-max-width: var(--thumbnails-img-width);
-min-height: cal(var(--thumbnails-img-height)+ var(--thumbnails-title-height));
-margin-top: 2.5vh;
-border:solid 1px black;
-border-radius:25%;
-overflow: hidden;
+
+.thumbnails-item {
+    max-width: var(--thumbnails-img-width);
+    min-height: calc(var(--thumbnails-img-height) + var(--thumbnails-title-height));
+    margin-top: 2.5vh;
+    border: solid 1px black;
+    border-radius: 25%;
+    overflow: hidden;
 }
-.thumbnails-image{
+
+.thumbnails-image {
     width: var(--thumbnails-img-width);
     height: var(--thumbnails-img-height);
     display: block;
 }
-.thumbnails-title{
+
+.thumbnails-title {
     display: block;
     text-align: center;
     height: var(--thumbnails-title-height);
     background-color: beige;
 }
-.thumbnails-anchor{
-text-decoration: none;
+
+.thumbnails-anchor {
+    text-decoration: none;
 }
+
 .thumbnails-item:hover {
-transform: scale(1.1);
-margin-left: 1vw;
+    transform: scale(1.1);
+    margin-left: 1vw;
 }
+
 @media(min-width: 560px) {
     :root {
         --thumbnails-img-width: 12vw;
@@ -112,30 +135,32 @@ margin-left: 1vw;
         font-size: 1.8em;
     }
 
-   .thumbnails-list{
-    flex-direction: column;
-    flex-wrap: nowrap;
-    max-height: 80vh;
-    order:-1;
-    justify-content: flex-start;
-   } 
-   .main-class{
-    flex-direction: row;
-    justify-content: space-around;
-   }
-   .details-image{
-    width: 40vw;
-    height: 30vw;
-   }
-   .details-container {
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-   }
-    .details-title {
-        left: 0;
-        bottom: 4vw;
+    .thumbnails-list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 75vh;
+        order: -1;
+        justify-content: flex-start;
     }
+
+    .main-class {
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .details-image {
+        width: 45vw;
+        height: 38vw;
+    }
+
+    .details-container {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+
     @media (min-width: 900px) {
         .thumbnails-list {
             padding-right: 2vw;
@@ -154,20 +179,14 @@ margin-left: 1vw;
 
 
 
-        .details-title {
-            font-size: 1.5em;
-        }
+        
 
         .details-image {
             width: 45vw;
             height: 35vw;
         }
-        .details-t {
 
-        }
     }
 
-
-}
 
 }
