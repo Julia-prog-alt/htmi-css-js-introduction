@@ -53,11 +53,19 @@ body {
     align-items: center;
     margin-bottom: 10vh;
 
-
+  
 }
 
+.hidden .details-container{
+    display: none;
+}
 .details-frame {
     position: relative;
+}
+.hide-button {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
 }
 
 .details-image {
