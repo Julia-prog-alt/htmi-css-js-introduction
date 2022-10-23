@@ -56,7 +56,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10vh;
-
+    transition: 5s cubic-bezier(0.1, 2, 0.9, 1); 
+    /*ease - линейно за 5 секунд чтобы точка увеличилась до нужных размеров. easy-in - равномерно*/
   
 }
 
@@ -138,6 +139,11 @@ body {
     transform: scale(1.1);
     margin-left: 1vw;
 }
+.is-point{
+        transform: scale(0.001); /*любой элемент где есть is-point преврфщается в точку*/
+        transition: 0s; /*за определенное время*/
+}
+
 
 @media(min-width: 560px) {
     :root {
@@ -157,13 +163,21 @@ body {
         order: -1;
         justify-content: flex-start;
     }
+    .hidden .thumbnails-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 
     .main-class {
         flex-direction: row;
         justify-content: space-around;
 
     }
-
+    .hidden.main-class{
+        
+    }
     .details-image {
         width: 45vw;
         height: 38vw;
@@ -174,7 +188,7 @@ body {
         align-items: center;
         margin-bottom: 0;
     }
-
+    
 
     @media (min-width: 900px) {
         .thumbnails-list {
