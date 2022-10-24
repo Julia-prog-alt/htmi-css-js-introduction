@@ -12,7 +12,7 @@ function setDetails(anchor) {
 }
 
 for(let i = 0; i < anchors.length; i++){
-    anchors[i]/addEventListener("click", function(){
+    anchors[i].addEventListener("click", function() {
         console.log("event - click on", anchors[i]);
         showDetails();
         setDetails(anchors[i]);
@@ -25,8 +25,13 @@ function showDetails(){
         detailsContainer.classList.remove(IS_POINT);
     },1)
 }
-function hideDetails(){
+function hideDetails() {
     mainClass.classList.add(HIDDEN);
+}
+function soundClick() {
+    var audio = new Audio();
+    audio.src = 'click.mp3';
+    audio.autoplay = true;
 }
 
 
