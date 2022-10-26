@@ -11,38 +11,30 @@ function setDetails(anchor) {
     detailsImage.setAttribute('src', anchor.getAttribute('data-details-image'));
     detailsTitle.innerHTML = anchor.getAttribute('data-details-title'); 
     audio.setAttribute("src", anchor.getAttribute('data-sound'))
-    audio.onplay():
+    audio.onplay();
     setTimeout(function(){
-        audio.onpause():
+        audio.onpause();
         audio.currentTime = 0;
     },5000)
 }
 
-for(let i = 0; i < anchors.length; i++){
+for(let i = 0; i < anchors.length; i++) {
     anchors[i].addEventListener("click", function() {
-        console.log("event - click on", anchors[i]);
+        console.log("event - click on ", anchors[i]);
         showDetails();
         setDetails(anchors[i]);
     })
 }
-function showDetails(){
+function showDetails() {
     mainClass.classList.remove(HIDDEN);
-    detailsContainer.classList.add(IS_POINT);/*classlist - показывает что перед вами список ......*/
-    setTimeout(function(){
+    detailsContainer.classList.add(IS_POINT);
+    setTimeout(function() {
         detailsContainer.classList.remove(IS_POINT);
     },1)
 }
 function hideDetails() {
     mainClass.classList.add(HIDDEN);
 }
-function soundClick() {
-    var audio = new Audio();
-    audio.src = 'click.mp3';
-    audio.autoplay = true;
-}
-
-
-
 
 
 
